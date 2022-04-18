@@ -29,8 +29,8 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
   String equation = "0";
   String result = "0";
   String expression = "";
-  double equationFontSize = 38.0;
-  double resultFontSize = 48.0;
+  double equationFontSize = 40.0;
+  double resultFontSize = 50.0;
 
   buttonPressed(String buttonText) {
     setState(() {

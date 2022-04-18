@@ -61,11 +61,31 @@ class _SimpleCalculatorState extends State<SimpleCalculator> {
         } catch (e) {
           result = "Error";
         }
-      } else if (result != "0" ) {
+      } else if (result != "0") {
         equationFontSize = 50.0;
         resultFontSize = 40.0;
-        equation = result + buttonText;
-        result = "0";
+        switch (buttonText){
+          case "1":
+          case "2":
+          case "3":
+          case "4":
+          case "5":
+          case "6":
+          case "7":
+          case "8":
+          case "9":
+          case "0":
+            equation = buttonText;
+            result = "0";
+            break;
+          case "00":
+            equation = "0";
+            result = "0";
+            break;
+          default:
+            equation = result + buttonText;
+            result = "0";
+        }
       } else {
         equationFontSize = 50.0;
         resultFontSize = 40.0;
